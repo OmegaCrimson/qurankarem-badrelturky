@@ -1,11 +1,67 @@
 {
   "reciters": [
     {
+      "id": "binhameed-hafs",
+      "reciter": "أحمد طالب بن حميد",
+      "riwaya": "حفص عن عاصم",
+      "name": "أحمد طالب بن حميد - حفص عن عاصم",
+      "baseURL": "https://server16.mp3quran.net/a_binhameed/Rewayat-Hafs-A-n-Assem/"
+    },
+    {
+      "id": "nuaynaa-hafs",
+      "reciter": "أحمد نعينع",
+      "riwaya": "حفص عن عاصم",
+      "name": "أحمد نعينع - حفص عن عاصم",
+      "baseURL": "https://server11.mp3quran.net/ahmad_nu/"
+    },
+    {
       "id": "bader-hafs",
       "reciter": "بدر التركي",
       "riwaya": "حفص عن عاصم",
       "name": "بدر التركي - حفص عن عاصم",
       "baseURL": "https://server10.mp3quran.net/bader/Rewayat-Hafs-A-n-Assem/"
+    },
+    {
+      "id": "banna-hafs",
+      "reciter": "محمود علي البنا",
+      "riwaya": "حفص عن عاصم",
+      "name": "محمود علي البنا - حفص عن عاصم",
+      "baseURL": "https://server8.mp3quran.net/bna/"
+    },
+    {
+      "id": "banna-mojawwad",
+      "reciter": "محمود علي البنا",
+      "riwaya": "المصحف المجود",
+      "name": "محمود علي البنا - المصحف المجود",
+      "baseURL": "https://server8.mp3quran.net/bna/Almusshaf-Al-Mojawwad/"
+    },
+    {
+      "id": "basit-hafs",
+      "reciter": "عبدالباسط عبدالصمد",
+      "riwaya": "حفص عن عاصم",
+      "name": "عبدالباسط عبدالصمد - حفص عن عاصم",
+      "baseURL": "https://server7.mp3quran.net/basit/"
+    },
+    {
+      "id": "basit-mojawwad",
+      "reciter": "عبدالباسط عبدالصمد",
+      "riwaya": "المصحف المجود",
+      "name": "عبدالباسط عبدالصمد - المصحف المجود",
+      "baseURL": "https://server7.mp3quran.net/basit/Almusshaf-Al-Mojawwad/"
+    },
+    {
+      "id": "basit-warsh",
+      "reciter": "عبدالباسط عبدالصمد",
+      "riwaya": "ورش عن نافع",
+      "name": "عبدالباسط عبدالصمد - ورش عن نافع",
+      "baseURL": "https://server7.mp3quran.net/basit/Rewayat-Warsh-A-n-Nafi/"
+    },
+    {
+      "id": "husary-douri",
+      "reciter": "الحصري",
+      "riwaya": "الدوري عن أبي عمرو",
+      "name": "الحصري - الدوري عن أبي عمرو",
+      "baseURL": "https://server13.mp3quran.net/husr/Rewayat-Aldori-A-n-Abi-Amr/"
     },
     {
       "id": "husary-hafs",
@@ -22,6 +78,13 @@
       "baseURL": "https://server13.mp3quran.net/husr/Almusshaf-Al-Mojawwad/"
     },
     {
+      "id": "husary-qalon",
+      "reciter": "الحصري",
+      "riwaya": "قالون عن نافع",
+      "name": "الحصري - قالون عن نافع",
+      "baseURL": "https://server13.mp3quran.net/husr/Rewayat-Qalon-A-n-Nafi/"
+    },
+    {
       "id": "husary-warsh",
       "reciter": "الحصري",
       "riwaya": "ورش عن نافع",
@@ -29,18 +92,32 @@
       "baseURL": "https://server13.mp3quran.net/husr/Rewayat-Warsh-A-n-Nafi/"
     },
     {
-      "id": "husary-douri",
-      "reciter": "الحصري",
-      "riwaya": "الدوري عن أبي عمرو",
-      "name": "الحصري - الدوري عن أبي عمرو",
-      "baseURL": "https://server13.mp3quran.net/husr/Rewayat-Aldori-A-n-Abi-Amr/"
+      "id": "h-saleh-hafs",
+      "reciter": "حسن صالح",
+      "riwaya": "حفص عن عاصم",
+      "name": "حسن صالح - حفص عن عاصم",
+      "baseURL": "https://server16.mp3quran.net/h_saleh/Rewayat-Hafs-A-n-Assem/"
     },
     {
-      "id": "husary-qalon",
-      "reciter": "الحصري",
-      "riwaya": "قالون عن نافع",
-      "name": "الحصري - قالون عن نافع",
-      "baseURL": "https://server13.mp3quran.net/husr/Rewayat-Qalon-A-n-Nafi/"
+      "id": "jaleel-hafs",
+      "reciter": "خالد الجليل",
+      "riwaya": "حفص عن عاصم",
+      "name": "خالد الجليل - حفص عن عاصم",
+      "baseURL": "https://server10.mp3quran.net/jleel/"
+    },
+    {
+      "id": "afs-douri-kisai",
+      "reciter": "مشاري العفاسي",
+      "riwaya": "الدوري عن الكسائي",
+      "name": "مشاري العفاسي - الدوري عن الكسائي",
+      "baseURL": "https://server8.mp3quran.net/afs/Rewayat-AlDorai-A-n-Al-Kisa-ai/"
+    },
+    {
+      "id": "afs-hafs",
+      "reciter": "مشاري العفاسي",
+      "riwaya": "حفص عن عاصم",
+      "name": "مشاري العفاسي - حفص عن عاصم",
+      "baseURL": "https://server8.mp3quran.net/afs/"
     },
     {
       "id": "minshawi-hafs",
@@ -78,13 +155,6 @@
       "baseURL": "https://server8.mp3quran.net/mustafa/Almusshaf-Al-Mojawwad/"
     },
     {
-      "id": "qatami-hafs",
-      "reciter": "ناصر القطامي",
-      "riwaya": "حفص عن عاصم",
-      "name": "ناصر القطامي - حفص عن عاصم",
-      "baseURL": "https://server6.mp3quran.net/qtm/"
-    },
-    {
       "id": "hazzaa-hafs",
       "reciter": "هزاع البلوشي",
       "riwaya": "حفص عن عاصم",
@@ -97,27 +167,6 @@
       "riwaya": "حفص عن عاصم",
       "name": "سعود الشريم - حفص عن عاصم",
       "baseURL": "https://server7.mp3quran.net/shur/"
-    },
-    {
-      "id": "basit-mojawwad",
-      "reciter": "عبدالباسط عبدالصمد",
-      "riwaya": "المصحف المجود",
-      "name": "عبدالباسط عبدالصمد - المصحف المجود",
-      "baseURL": "https://server7.mp3quran.net/basit/Almusshaf-Al-Mojawwad/"
-    },
-    {
-      "id": "basit-warsh",
-      "reciter": "عبدالباسط عبدالصمد",
-      "riwaya": "ورش عن نافع",
-      "name": "عبدالباسط عبدالصمد - ورش عن نافع",
-      "baseURL": "https://server7.mp3quran.net/basit/Rewayat-Warsh-A-n-Nafi/"
-    },
-    {
-      "id": "basit-hafs",
-      "reciter": "عبدالباسط عبدالصمد",
-      "riwaya": "حفص عن عاصم",
-      "name": "عبدالباسط عبدالصمد - حفص عن عاصم",
-      "baseURL": "https://server7.mp3quran.net/basit/"
     },
     {
       "id": "okasha-bazzi",
@@ -134,74 +183,18 @@
       "baseURL": "https://server16.mp3quran.net/okasha/Rewayat-AlDorai-A-n-Al-Kisa-ai/"
     },
     {
-      "id": "binhameed-hafs",
-      "reciter": "أحمد طالب بن حميد",
+      "id": "qatami-hafs",
+      "reciter": "ناصر القطامي",
       "riwaya": "حفص عن عاصم",
-      "name": "أحمد طالب بن حميد - حفص عن عاصم",
-      "baseURL": "https://server16.mp3quran.net/a_binhameed/Rewayat-Hafs-A-n-Assem/"
+      "name": "ناصر القطامي - حفص عن عاصم",
+      "baseURL": "https://server6.mp3quran.net/qtm/"
     },
     {
-      "id": "banna-hafs",
-      "reciter": "محمود علي البنا",
+      "id": "yasser-hafs",
+      "reciter": "ياسر الدوسري",
       "riwaya": "حفص عن عاصم",
-      "name": "محمود علي البنا - حفص عن عاصم",
-      "baseURL": "https://server8.mp3quran.net/bna/"
-    },
-    {
-      "id": "banna-mojawwad",
-      "reciter": "محمود علي البنا",
-      "riwaya": "المصحف المجود",
-      "name": "محمود علي البنا - المصحف المجود",
-      "baseURL": "https://server8.mp3quran.net/bna/Almusshaf-Al-Mojawwad/"
-    },
-    {
-      "id": "jaleel-hafs",
-      "reciter": "خالد الجليل",
-      "riwaya": "حفص عن عاصم",
-      "name": "خالد الجليل - حفص عن عاصم",
-      "baseURL": "https://server10.mp3quran.net/jleel/"
-    },
-    {
-      "id": "nuaynaa-hafs",
-      "reciter": "أحمد نعينع",
-      "riwaya": "حفص عن عاصم",
-      "name": "أحمد نعينع - حفص عن عاصم",
-      "baseURL": "https://server11.mp3quran.net/ahmad_nu/"
-    },
-    {
-      "id": "mustafa-mojawwad",
-      "reciter": "مصطفى إسماعيل",
-      "riwaya": "المصحف المجود",
-      "name": "مصطفى إسماعيل - المصحف المجود",
-      "baseURL": "https://server8.mp3quran.net/mustafa/Almusshaf-Al-Mojawwad/"
-    },
-    {
-      "id": "mustafa-hafs",
-      "reciter": "مصطفى إسماعيل",
-      "riwaya": "حفص عن عاصم",
-      "name": "مصطفى إسماعيل - حفص عن عاصم",
-      "baseURL": "https://server8.mp3quran.net/mustafa/"
-    },
-    {
-      "id": "afs-hafs",
-      "reciter": "مشاري العفاسي",
-      "riwaya": "حفص عن عاصم",
-      "name": "مشاري العفاسي - حفص عن عاصم",
-      "baseURL": "https://server8.mp3quran.net/afs/"
-    },
-    {
-      "id": "afs-douri-kisai",
-      "reciter": "مشاري العفاسي",
-      "riwaya": "الدوري عن الكسائي",
-      "name": "مشاري العفاسي - الدوري عن الكسائي",
-      "baseURL": "https://server8.mp3quran.net/afs/Rewayat-AlDorai-A-n-Al-Kisa-ai/"
-    },
-    {
-      "id": "h-saleh-hafs",
-      "reciter": "حسن صالح",
-      "riwaya": "حفص عن عاصم",
-      "name": "حسن صالح - حفص عن عاصم",
-      "baseURL": "https://server16.mp3quran.net/h_saleh/Rewayat-Hafs-A-n-Assem/"
+      "name": "ياسر الدوسري - حفص عن عاصم",
+      "baseURL": "https://server11.mp3quran.net/yasser/"
     }
   ]
 }
