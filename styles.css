@@ -1,0 +1,55 @@
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --header-bg: #198754;
+  --header-text: #ffffff;
+  --card-bg: #ffffff;
+  --link-color: #198754;
+}
+
+body {
+  font-family: 'Amiri', serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+.card {
+  background-color: var(--card-bg);
+}
+
+a {
+  color: var(--link-color);
+}
+
+/* Themes */
+.theme-light {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --header-bg: #198754;
+  --header-text: #ffffff;
+  --card-bg: #ffffff;
+  --link-color: #198754;
+}
+
+.theme-dark {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --header-bg: #333333;
+  --header-text: #ffffff;
+  --card-bg: #1e1e1e;
+  --link-color: #90ee90;
+}
+
+.theme-sand {
+  --bg-color: #fdf6e3;
+  --text-color: #3e3e3e;
+  --header-bg: #c2b280;
+  --header-text: #000000;
+  --card-bg: #fffef9;
+  --link-color: #b58900;
+}
