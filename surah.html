@@ -15,7 +15,7 @@
 </head>
 <body>
   <header class="bg-success text-white text-center p-3">
-    <h1>القرآن الكريم بصوت الشيخ بدر التركي</h1>
+    <h1>القرآن الكريم بصوت الشيخ <span id="reciter-name">...</span></h1>
   </header>
 
   <main class="container my-4">
@@ -29,12 +29,29 @@
   </main>
 
   <footer class="text-center text-muted p-3">
-    &copy; <span id="year"></span> القرآن الكريم بصوت الشيخ بدر التركي
+    &copy; <span id="year"></span> القرآن الكريم بصوت الشيخ <span id="reciter-footer">...</span>
   </footer>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const surahId = parseInt(params.get('id'));
+    const reciterKey = params.get('reciter') || 'bader';
+
+    const reciterBaseURLs = {
+      bader: 'https://server10.mp3quran.net/bader/Rewayat-Hafs-A-n-Assem/',
+      husary: 'https://server6.mp3quran.net/husr/',
+      minshawi: 'https://server11.mp3quran.net/minsh/'
+    };
+
+    const reciterNames = {
+      bader: 'بدر التركي',
+      husary: 'الحصري',
+      minshawi: 'المنشاوي'
+    };
+
+    const reciterName = reciterNames[reciterKey] || 'بدر التركي';
+    document.getElementById('reciter-name').textContent = reciterName;
+    document.getElementById('reciter-footer').textContent = reciterName;
 
     fetch('data.json')
       .then(res => res.json())
@@ -57,7 +74,11 @@
           <li class="list-group-item">الموضوعات: ${surah.topics.join(", ")}</li>
         `;
 
-        document.getElementById('surah-audio').src = surah.audio;
+        const audio = document.getElementById('surah-audio');
+        const paddedId = String(surah.id).padStart(3, '0');
+        const baseURL = reciterBaseURLs[reciterKey] || reciterBaseURLs['bader'];
+        audio.src = `${baseURL}${paddedId}.mp3`;
+        audio.dataset.surahId = surah.id;
       });
 
     // Load verses from XML
