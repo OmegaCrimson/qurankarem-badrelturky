@@ -36,7 +36,7 @@ qurankarem-flask/
 
 ## 🚀 طريقة الاستخدام
 1. افتح الموقع المنشور عبر GitHub Pages:  
-   [🔗 رابط الموقع](https://omegacrimson.github.io/qurankarem-badrelturky/index.html)
+   [🔗 رابط الموقع](https://omegacrimson.github.io/qurankarem/index.html)
 
 2. من الصفحة الرئيسية يمكنك تصفح جميع السور.  
 3. اضغط على أي سورة لفتح صفحة التفاصيل وتشغيل التلاوة الصوتية.
@@ -119,7 +119,7 @@ qurankarem-flask/
 
 ## 🚀 Usage
 1. Open the published GitHub Pages site:  
-   [🔗 Live Site](https://omegacrimson.github.io/qurankarem-badrelturky/index.html)
+   [🔗 Live Site](https://omegacrimson.github.io/qurankarem/index.html)
 
 2. Browse all surahs from the homepage.  
 3. Click any surah to open its detail page and play the audio recitation.
