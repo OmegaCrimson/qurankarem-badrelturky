@@ -26,7 +26,9 @@ a {
   color: var(--link-color);
 }
 
-/* ثيم أخضر النعناع */
+/* ========================= */
+/* 🟢 ثيمات الأخضر الفاتحة */
+/* ========================= */
 .theme-mint {
   --bg-color: #e8f5e9;
   --text-color: #1b5e20;
@@ -36,7 +38,6 @@ a {
   --link-color: #2e7d32;
 }
 
-/* ثيم أخضر الزيتون */
 .theme-olive {
   --bg-color: #f3f2e9;
   --text-color: #3e3e2e;
@@ -46,17 +47,6 @@ a {
   --link-color: #6b8e23;
 }
 
-/* ثيم أخضر الغابة */
-.theme-forest {
-  --bg-color: #e0f2f1;
-  --text-color: #003300;
-  --header-bg: #004d40;
-  --header-text: #ffffff;
-  --card-bg: #ffffff;
-  --link-color: #00695c;
-}
-
-/* ثيم أخضر زمردي */
 .theme-emerald {
   --bg-color: #e0f7fa;
   --text-color: #004d40;
@@ -66,7 +56,9 @@ a {
   --link-color: #00796b;
 }
 
-/* وردي هادئ */
+/* ========================= */
+/* 🔴 ثيمات الأحمر الفاتحة */
+/* ========================= */
 .theme-rose {
   --bg-color: #fff5f7;
   --text-color: #5c1a1a;
@@ -76,27 +68,6 @@ a {
   --link-color: #c62828;
 }
 
-/* نبيتي كلاسيكي */
-.theme-burgundy {
-  --bg-color: #fbe9e7;
-  --text-color: #4e1e2a;
-  --header-bg: #800020;
-  --header-text: #ffffff;
-  --card-bg: #fff0f0;
-  --link-color: #a52a2a;
-}
-
-/* أحمر رمّاني */
-.theme-pomegranate {
-  --bg-color: #fdf2f2;
-  --text-color: #6e0f0f;
-  --header-bg: #c62828;
-  --header-text: #ffffff;
-  --card-bg: #fff5f5;
-  --link-color: #b71c1c;
-}
-
-/* أحمر طوبي */
 .theme-terra {
   --bg-color: #fef3ec;
   --text-color: #5a2e1f;
@@ -106,7 +77,18 @@ a {
   --link-color: #8b4513;
 }
 
-/* أزرق سماوي */
+.theme-pomegranate {
+  --bg-color: #fdf2f2;
+  --text-color: #6e0f0f;
+  --header-bg: #c62828;
+  --header-text: #ffffff;
+  --card-bg: #fff5f5;
+  --link-color: #b71c1c;
+}
+
+/* ========================= */
+/* 🔵 ثيمات الأزرق الفاتحة */
+/* ========================= */
 .theme-sky {
   --bg-color: #e3f2fd;
   --text-color: #0d47a1;
@@ -116,7 +98,6 @@ a {
   --link-color: #1565c0;
 }
 
-/* أزرق ملكي */
 .theme-royal {
   --bg-color: #e8eaf6;
   --text-color: #1a237e;
@@ -126,17 +107,6 @@ a {
   --link-color: #3949ab;
 }
 
-/* أزرق داكن */
-.theme-navy {
-  --bg-color: #e0e7f1;
-  --text-color: #0a192f;
-  --header-bg: #001f3f;
-  --header-text: #ffffff;
-  --card-bg: #f5f8fc;
-  --link-color: #0074d9;
-}
-
-/* أزرق رمادي */
 .theme-slate {
   --bg-color: #f0f4f8;
   --text-color: #2c3e50;
@@ -145,9 +115,12 @@ a {
   --card-bg: #ffffff;
   --link-color: #455a64;
 }
+/* ========================= */
+/* 🟢 ثيمات الأخضر الداكنة */
+/* ========================= */
 .theme-forest-dark {
   --bg-color: #0d1f1a;
-  --text-color: #c8e6c9;
+  --text-color: #e0f2f1;
   --header-bg: #1b5e20;
   --header-text: #ffffff;
   --card-bg: #1a2e2a;
@@ -156,7 +129,7 @@ a {
 
 .theme-olive-dark {
   --bg-color: #2e2e1e;
-  --text-color: #e6e6cc;
+  --text-color: #f1f1f1;
   --header-bg: #6b8e23;
   --header-text: #ffffff;
   --card-bg: #3a3a2a;
@@ -165,15 +138,19 @@ a {
 
 .theme-emerald-dark {
   --bg-color: #00332e;
-  --text-color: #b2dfdb;
+  --text-color: #e0f2f1;
   --header-bg: #00796b;
   --header-text: #ffffff;
   --card-bg: #004d40;
   --link-color: #4db6ac;
 }
+
+/* ========================= */
+/* 🔴 ثيمات الأحمر الداكنة */
+/* ========================= */
 .theme-burgundy-dark {
   --bg-color: #2a0e14;
-  --text-color: #f8d7da;
+  --text-color: #fce4ec;
   --header-bg: #800020;
   --header-text: #ffffff;
   --card-bg: #3e1a1f;
@@ -197,9 +174,12 @@ a {
   --card-bg: #3a1a1a;
   --link-color: #e57373;
 }
+/* ========================= */
+/* 🔵 ثيمات الأزرق الداكنة */
+/* ========================= */
 .theme-navy-dark {
   --bg-color: #0a192f;
-  --text-color: #bbdefb;
+  --text-color: #e3f2fd;
   --header-bg: #001f3f;
   --header-text: #ffffff;
   --card-bg: #102840;
@@ -223,6 +203,10 @@ a {
   --card-bg: #37474f;
   --link-color: #90a4ae;
 }
+
+/* ========================= */
+/* 🌈 ثيمات مريحة للعين */
+/* ========================= */
 .theme-sand {
   --bg-color: #fdf6e3;
   --text-color: #3e3e3e;
