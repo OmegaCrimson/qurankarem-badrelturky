@@ -167,6 +167,41 @@
       "riwaya": "حفص عن عاصم",
       "name": "أحمد نعينع - حفص عن عاصم",
       "baseURL": "https://server11.mp3quran.net/ahmad_nu/"
+    },
+    {
+      "id": "mustafa-mojawwad",
+      "reciter": "مصطفى إسماعيل",
+      "riwaya": "المصحف المجود",
+      "name": "مصطفى إسماعيل - المصحف المجود",
+      "baseURL": "https://server8.mp3quran.net/mustafa/Almusshaf-Al-Mojawwad/"
+    },
+    {
+      "id": "mustafa-hafs",
+      "reciter": "مصطفى إسماعيل",
+      "riwaya": "حفص عن عاصم",
+      "name": "مصطفى إسماعيل - حفص عن عاصم",
+      "baseURL": "https://server8.mp3quran.net/mustafa/"
+    },
+    {
+      "id": "afs-hafs",
+      "reciter": "مشاري العفاسي",
+      "riwaya": "حفص عن عاصم",
+      "name": "مشاري العفاسي - حفص عن عاصم",
+      "baseURL": "https://server8.mp3quran.net/afs/"
+    },
+    {
+      "id": "afs-douri-kisai",
+      "reciter": "مشاري العفاسي",
+      "riwaya": "الدوري عن الكسائي",
+      "name": "مشاري العفاسي - الدوري عن الكسائي",
+      "baseURL": "https://server8.mp3quran.net/afs/Rewayat-AlDorai-A-n-Al-Kisa-ai/"
+    },
+    {
+      "id": "h-saleh-hafs",
+      "reciter": "حسن صالح",
+      "riwaya": "حفص عن عاصم",
+      "name": "حسن صالح - حفص عن عاصم",
+      "baseURL": "https://server16.mp3quran.net/h_saleh/Rewayat-Hafs-A-n-Assem/"
     }
   ]
 }
