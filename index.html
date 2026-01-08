@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <title>القرآن الكريم بصوت الشيخ بدر التركي</title>
+  <title>القرآن الكريم</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 </head>
 <body>
   <header class="bg-success text-white text-center p-3">
-    <h1>القرآن الكريم بصوت الشيخ <span id="reciter-name">بدر التركي</span></h1>
+    <h1>القرآن الكريم بصوت الشيخ <span id="reciter-name">...</span></h1>
   </header>
 
   <main class="container my-4">
@@ -22,11 +22,7 @@
 
       <div class="mb-3">
         <label for="reciterSelect" class="form-label">اختر القارئ:</label>
-        <select id="reciterSelect" class="form-select">
-          <option value="bader">الشيخ بدر التركي - حفص عن نافع</option>
-          <option value="husary">الشيخ الحصري - حفص عن نافع</option>
-          <option value="minshawi">الشيخ المنشاوي - حفص عن نافع</option>
-        </select>
+        <select id="reciterSelect" class="form-select"></select>
       </div>
 
       <input type="text" id="search" class="form-control search-input" placeholder="🔍 ابحث عن سورة...">
@@ -35,7 +31,7 @@
   </main>
 
   <footer class="text-center text-muted p-3">
-    &copy; <span id="year"></span> القرآن الكريم بصوت الشيخ <span id="reciter-footer">بدر التركي</span>
+    &copy; <span id="year"></span> القرآن الكريم بصوت الشيخ <span id="reciter-footer">...</span>
   </footer>
 
   <script>
@@ -45,33 +41,46 @@
     const reciterName = document.getElementById('reciter-name');
     const reciterFooter = document.getElementById('reciter-footer');
     let allSurahs = [];
+    let reciters = [];
 
-    const reciterNames = {
-      bader: 'بدر التركي',
-      husary: 'الحصري',
-      minshawi: 'المنشاوي'
-    };
-
-    // Load saved reciter or default
-    const savedReciter = localStorage.getItem('selectedReciter') || 'bader';
-    reciterSelect.value = savedReciter;
-    reciterName.textContent = reciterNames[savedReciter];
-    reciterFooter.textContent = reciterNames[savedReciter];
-
-    reciterSelect.addEventListener('change', () => {
-      const selected = reciterSelect.value;
-      localStorage.setItem('selectedReciter', selected);
-      reciterName.textContent = reciterNames[selected];
-      reciterFooter.textContent = reciterNames[selected];
-      renderList(allSurahs); // re-render links with new reciter
-    });
-
-    fetch('data.json')
+    fetch('reciters.json')
+      .then(res => res.json())
+      .then(data => {
+        reciters = data.reciters;
+        populateReciterSelect();
+        const saved = localStorage.getItem('selectedReciter') || reciters[0].id;
+        reciterSelect.value = saved;
+        updateReciterName(saved);
+        localStorage.setItem('selectedReciter', saved);
+        return fetch('data.json');
+      })
       .then(res => res.json())
       .then(data => {
         allSurahs = data.surahs;
         renderList(allSurahs);
       });
+
+    function populateReciterSelect() {
+      reciters.forEach(r => {
+        const option = document.createElement('option');
+        option.value = r.id;
+        option.textContent = r.name;
+        reciterSelect.appendChild(option);
+      });
+    }
+
+    function updateReciterName(id) {
+      const r = reciters.find(r => r.id === id);
+      reciterName.textContent = r?.reciter || '';
+      reciterFooter.textContent = r?.reciter || '';
+    }
+
+    reciterSelect.addEventListener('change', () => {
+      const selected = reciterSelect.value;
+      localStorage.setItem('selectedReciter', selected);
+      updateReciterName(selected);
+      renderList(allSurahs);
+    });
 
     function renderList(surahs) {
       const reciter = reciterSelect.value;
