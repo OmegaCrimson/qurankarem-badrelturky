@@ -22,6 +22,12 @@
     <div class="card shadow p-4" id="surah-card">
       <h2 class="text-center" id="surah-title">تحميل...</h2>
       <ul class="list-group mb-3" id="surah-details"></ul>
+
+      <div class="mb-3">
+        <label for="riwayaSelect" class="form-label">اختر الرواية:</label>
+        <select id="riwayaSelect" class="form-select"></select>
+      </div>
+
       <audio controls preload="none" class="w-100 mb-3" id="surah-audio"></audio>
       <div id="verses" class="verses"></div>
       <a href="index.html" class="btn btn-outline-success mt-3">⬅ العودة إلى القائمة</a>
@@ -35,45 +41,84 @@
   <script>
     const params = new URLSearchParams(window.location.search);
     const surahId = parseInt(params.get('id'));
-    const reciterId = params.get('reciter') || localStorage.getItem('selectedReciter') || 'bader-hafs';
+    const selectedReciterId = params.get('reciter') || localStorage.getItem('selectedReciter') || 'bader-hafs';
 
-    let reciterInfo = null;
+    const reciterNameEl = document.getElementById('reciter-name');
+    const reciterFooterEl = document.getElementById('reciter-footer');
+    const riwayaSelect = document.getElementById('riwayaSelect');
+    const audio = document.getElementById('surah-audio');
+
+    let allReciters = [];
+    let currentReciter = null;
+    let currentSurah = null;
 
     fetch('reciters.json')
       .then(res => res.json())
       .then(data => {
-        reciterInfo = data.reciters.find(r => r.id === reciterId) || data.reciters[0];
-        document.getElementById('reciter-name').textContent = reciterInfo.reciter;
-        document.getElementById('reciter-footer').textContent = reciterInfo.reciter;
-        localStorage.setItem('selectedReciter', reciterInfo.id);
+        allReciters = data.reciters;
+
+        const baseReciterName = selectedReciterId.split('-')[0];
+        const availableRiwayat = allReciters.filter(r => r.id.startsWith(baseReciterName));
+
+        // Populate riwaya dropdown
+        availableRiwayat.forEach(r => {
+          const option = document.createElement('option');
+          option.value = r.id;
+          option.textContent = r.riwaya;
+          riwayaSelect.appendChild(option);
+        });
+
+        // Set selected riwaya
+        const saved = selectedReciterId;
+        riwayaSelect.value = saved;
+
+        updateReciterInfo(saved);
+        localStorage.setItem('selectedReciter', saved);
+
         return fetch('data.json');
       })
       .then(res => res.json())
       .then(data => {
-        const surah = data.surahs.find(s => s.id === surahId);
-        if (!surah) {
+        currentSurah = data.surahs.find(s => s.id === surahId);
+        if (!currentSurah) {
           document.getElementById('surah-title').textContent = 'السورة غير موجودة';
           return;
         }
 
-        document.title = `سورة ${surah.name}`;
-        document.getElementById('surah-title').textContent = `سورة ${surah.name}`;
+        document.title = `سورة ${currentSurah.name}`;
+        document.getElementById('surah-title').textContent = `سورة ${currentSurah.name}`;
 
         const details = document.getElementById('surah-details');
         details.innerHTML = `
-          <li class="list-group-item">الترتيب: ${surah.id}</li>
-          <li class="list-group-item">عدد الآيات: ${surah.ayahs}</li>
-          <li class="list-group-item">نوعها: ${surah.type}</li>
-          <li class="list-group-item">أسماء أخرى: ${surah.other_names.join(", ")}</li>
-          <li class="list-group-item">الموضوعات: ${surah.topics.join(", ")}</li>
-          <li class="list-group-item">الرواية: ${reciterInfo.riwaya}</li>
+          <li class="list-group-item">الترتيب: ${currentSurah.id}</li>
+          <li class="list-group-item">عدد الآيات: ${currentSurah.ayahs}</li>
+          <li class="list-group-item">نوعها: ${currentSurah.type}</li>
+          <li class="list-group-item">أسماء أخرى: ${currentSurah.other_names.join(", ")}</li>
+          <li class="list-group-item">الموضوعات: ${currentSurah.topics.join(", ")}</li>
         `;
 
-        const audio = document.getElementById('surah-audio');
-        const paddedId = String(surah.id).padStart(3, '0');
-        audio.src = `${reciterInfo.baseURL}${paddedId}.mp3`;
-        audio.dataset.surahId = surah.id;
+        updateAudioSource();
       });
+
+    function updateReciterInfo(id) {
+      currentReciter = allReciters.find(r => r.id === id);
+      reciterNameEl.textContent = currentReciter.reciter;
+      reciterFooterEl.textContent = currentReciter.reciter;
+    }
+
+    function updateAudioSource() {
+      if (!currentReciter || !currentSurah) return;
+      const paddedId = String(currentSurah.id).padStart(3, '0');
+      audio.src = `${currentReciter.baseURL}${paddedId}.mp3`;
+      audio.dataset.surahId = currentSurah.id;
+    }
+
+    riwayaSelect.addEventListener('change', () => {
+      const newId = riwayaSelect.value;
+      localStorage.setItem('selectedReciter', newId);
+      updateReciterInfo(newId);
+      updateAudioSource();
+    });
 
     // Load verses from XML
     fetch('quran-uthmani.xml')
