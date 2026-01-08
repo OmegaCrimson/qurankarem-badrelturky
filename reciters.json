@@ -48,6 +48,76 @@
       "riwaya": "حفص عن عاصم",
       "name": "المنشاوي - حفص عن عاصم",
       "baseURL": "https://server10.mp3quran.net/minsh/"
+    },
+    {
+      "id": "minshawi-mojawwad",
+      "reciter": "المنشاوي",
+      "riwaya": "المصحف المجود",
+      "name": "المنشاوي - المصحف المجود",
+      "baseURL": "https://server10.mp3quran.net/minsh/Almusshaf-Al-Mojawwad/"
+    },
+    {
+      "id": "minshawi-muallem",
+      "reciter": "المنشاوي",
+      "riwaya": "المصحف المعلم",
+      "name": "المنشاوي - المصحف المعلم",
+      "baseURL": "https://server10.mp3quran.net/minsh/Almusshaf-Al-Mo-lim/"
+    },
+    {
+      "id": "mustafa-hafs",
+      "reciter": "مصطفى إسماعيل",
+      "riwaya": "حفص عن عاصم",
+      "name": "مصطفى إسماعيل - حفص عن عاصم",
+      "baseURL": "https://server8.mp3quran.net/mustafa/"
+    },
+    {
+      "id": "mustafa-mojawwad",
+      "reciter": "مصطفى إسماعيل",
+      "riwaya": "المصحف المجود",
+      "name": "مصطفى إسماعيل - المصحف المجود",
+      "baseURL": "https://server8.mp3quran.net/mustafa/Almusshaf-Al-Mojawwad/"
+    },
+    {
+      "id": "qatami-hafs",
+      "reciter": "ناصر القطامي",
+      "riwaya": "حفص عن عاصم",
+      "name": "ناصر القطامي - حفص عن عاصم",
+      "baseURL": "https://server6.mp3quran.net/qtm/"
+    },
+    {
+      "id": "hazzaa-hafs",
+      "reciter": "هزاع البلوشي",
+      "riwaya": "حفص عن عاصم",
+      "name": "هزاع البلوشي - حفص عن عاصم",
+      "baseURL": "https://server11.mp3quran.net/hazza/"
+    },
+    {
+      "id": "shuraim-hafs",
+      "reciter": "سعود الشريم",
+      "riwaya": "حفص عن عاصم",
+      "name": "سعود الشريم - حفص عن عاصم",
+      "baseURL": "https://server7.mp3quran.net/shur/"
+    },
+    {
+      "id": "basit-mojawwad",
+      "reciter": "عبدالباسط عبدالصمد",
+      "riwaya": "المصحف المجود",
+      "name": "عبدالباسط عبدالصمد - المصحف المجود",
+      "baseURL": "https://server7.mp3quran.net/basit/Almusshaf-Al-Mojawwad/"
+    },
+    {
+      "id": "basit-warsh",
+      "reciter": "عبدالباسط عبدالصمد",
+      "riwaya": "ورش عن نافع",
+      "name": "عبدالباسط عبدالصمد - ورش عن نافع",
+      "baseURL": "https://server7.mp3quran.net/basit/Rewayat-Warsh-A-n-Nafi/"
+    },
+    {
+      "id": "basit-hafs",
+      "reciter": "عبدالباسط عبدالصمد",
+      "riwaya": "حفص عن عاصم",
+      "name": "عبدالباسط عبدالصمد - حفص عن عاصم",
+      "baseURL": "https://server7.mp3quran.net/basit/"
     }
   ]
 }
