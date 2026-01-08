@@ -13,25 +13,58 @@
 </head>
 <body>
   <header class="bg-success text-white text-center p-3">
-    <h1>القرآن الكريم بصوت الشيخ بدر التركي</h1>
+    <h1>القرآن الكريم بصوت الشيخ <span id="reciter-name">بدر التركي</span></h1>
   </header>
 
   <main class="container my-4">
     <div class="card shadow p-4">
       <h2 class="mb-3">قائمة السور</h2>
+
+      <div class="mb-3">
+        <label for="reciterSelect" class="form-label">اختر القارئ:</label>
+        <select id="reciterSelect" class="form-select">
+          <option value="bader">الشيخ بدر التركي</option>
+          <option value="husary">الشيخ الحصري</option>
+          <option value="minshawi">الشيخ المنشاوي</option>
+        </select>
+      </div>
+
       <input type="text" id="search" class="form-control search-input" placeholder="🔍 ابحث عن سورة...">
       <ul id="surah-list" class="list-group"></ul>
     </div>
   </main>
 
   <footer class="text-center text-muted p-3">
-    &copy; <span id="year"></span> القرآن الكريم بصوت الشيخ بدر التركي
+    &copy; <span id="year"></span> القرآن الكريم بصوت الشيخ <span id="reciter-footer">بدر التركي</span>
   </footer>
 
   <script>
     const list = document.getElementById('surah-list');
     const searchInput = document.getElementById('search');
+    const reciterSelect = document.getElementById('reciterSelect');
+    const reciterName = document.getElementById('reciter-name');
+    const reciterFooter = document.getElementById('reciter-footer');
     let allSurahs = [];
+
+    const reciterNames = {
+      bader: 'بدر التركي',
+      husary: 'الحصري',
+      minshawi: 'المنشاوي'
+    };
+
+    // Load saved reciter or default
+    const savedReciter = localStorage.getItem('selectedReciter') || 'bader';
+    reciterSelect.value = savedReciter;
+    reciterName.textContent = reciterNames[savedReciter];
+    reciterFooter.textContent = reciterNames[savedReciter];
+
+    reciterSelect.addEventListener('change', () => {
+      const selected = reciterSelect.value;
+      localStorage.setItem('selectedReciter', selected);
+      reciterName.textContent = reciterNames[selected];
+      reciterFooter.textContent = reciterNames[selected];
+      renderList(allSurahs); // re-render links with new reciter
+    });
 
     fetch('data.json')
       .then(res => res.json())
@@ -41,12 +74,13 @@
       });
 
     function renderList(surahs) {
+      const reciter = reciterSelect.value;
       list.innerHTML = '';
       surahs.forEach(surah => {
         const li = document.createElement('li');
         li.className = 'list-group-item';
         li.innerHTML = `
-          <a href="surah.html?id=${surah.id}" class="text-success fw-bold">
+          <a href="surah.html?id=${surah.id}&reciter=${reciter}" class="text-success fw-bold">
             سورة ${surah.name} (${surah.ayahs} آية)
           </a>`;
         list.appendChild(li);
