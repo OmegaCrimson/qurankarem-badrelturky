@@ -5,7 +5,8 @@
 ![JavaScript](https://img.shields.io/badge/javascript-es6-yellow.svg)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-5.3-purple.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
-![Status](https://img.shields.io/badge/status-published)
+![Status](https://img.shields.io/badge/status-published-success.svg)
+
 موقع ويب بسيط وأنيق يعرض جميع سور القرآن الكريم (١١٤ سورة) مع بيانات وصفية وتشغيل صوتي لتلاوات متعددة بالروايات المختلفة.  
 تم تطويره باستخدام **HTML/CSS/JS** و **Bootstrap**، مع دعم تعدد الثيمات وتحسينات في تجربة القراءة.
 
