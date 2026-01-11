@@ -50,10 +50,12 @@ qurankarem/
 
 ## 📸 لقطات شاشة
 - **الصفحة الرئيسية**: قائمة السور مع عدد الآيات والثيم المختار.  
-![Homepage Screenshot](Screenshots/main.png)
+![Homepage Screenshot](Screenshots/mai.png)
+![Homepage Screenshot](Screenshots/1.png)
 
 - **صفحة السورة**: بيانات وصفية + مشغل صوت + نص السورة.  
-![Surah Screenshot](Screenshots/3.png)
+![Surah Screenshot](Screenshots/2.png) 
+![Surah Screenshot](Screenshots/.png)
 
 ---
 
@@ -138,11 +140,13 @@ qurankarem/
 ---
 
 ## 📸 Screenshots
-- **Homepage**: Surah list with theme applied.  
-![Homepage Screenshot](Screenshots/main.png)
+- **Homepage**: Surah list with theme applied.   
+![Homepage Screenshot](Screenshots/mai.png)
+![Homepage Screenshot](Screenshots/1.png)
 
-- **Surah Page**: Metadata + audio player + full text.  
-![Surah Screenshot](Screenshots/3.png)
+- **Surah Page**: Metadata + audio player + full text.   
+![Surah Screenshot](Screenshots/2.png) 
+![Surah Screenshot](Screenshots/.png)
 
 ---
 
